@@ -6,13 +6,13 @@
 // But instead we're going to implement it from scratch:
 var getElementsByClassName = function(className
 ) {
-  console.log('getElementsByClassName called with className: ' + className );
+  //console.log('getElementsByClassName called with className: ' + className );
   // your code here
   var nodes = [];// define output array
 
   var searchNodes = function(node){//define recurring function that takes in a node parameter
-    console.log('node.children.length: ' + node.children.length);
-    console.log('node.classList: ' + node.classList);
+    //console.log('node.children.length: ' + node.children.length);
+    //console.log('node.classList: ' + node.classList);
     var classes = node.classList;//split classes by space and add to an array
     if(classes.contains(className)){
       nodes.push(node);
@@ -24,7 +24,7 @@ var getElementsByClassName = function(className
   return;
   }
   searchNodes(document.body);
-  console.log(nodes);
+  //console.log(nodes);
   return nodes;//return output array
 
 };
